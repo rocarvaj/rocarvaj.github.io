@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,6 +10,9 @@
 
 <title>Using fingerprint sensor on HP EliteBook with Ubuntu – Rodolfo Carvajal</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -33,15 +36,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a316efe8a853581eab868fa624086c0f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-244ce1b9ec229af56bb6f90d24b3371d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,6 +73,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -80,8 +83,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Rodolfo Carvajal</span>
     </a>
@@ -142,10 +143,10 @@ ul.task-list li input[type="checkbox"] {
 
 <p>For reasons I should not disclose, I couldn’t use the fingerprint sensor on a HP EliteBook laptop (HP EliteBook 840 G8) on Windows. This, together with my natural distaste for Windows, pushed me to install Ubuntu 25.10.</p>
 <p>If you go to Settings &gt; Users, you can see the “Fingerprint Login” option which is disabled by default. If you try to enable it, there is a button with a plus sign that says “Scan new fingerprint”, but when you click on it, nothing happens.</p>
-<p>I <em>braved</em> (shout-out to &lt;search.brave.com&gt;) the problem and found out you should fire up the terminal and run <code>fprintd-enroll</code>. You’ll see the message:</p>
+<p>I braved (shout-out to &lt;search.brave.com&gt;) the problem and found out you should fire up the terminal and run fprintd-enroll. You’ll see the message:</p>
 <pre><code>Using device /net/reactivated/Fprint/Device/0
-Enrolling right-index-finger finger.</code></pre>
-<p>Put your finger on the sensor and you should see the “Enroll result: enroll-stage-passed”. Keep on lifting and putting the finger on the sensor, until you see “Enroll result: enroll-completed”.</p>
+Enrolling right-index-finger finger.
+Put your finger on the sensor and you should see the “Enroll result: enroll-stage-passed”. Keep on lifting and putting the finger on the sensor, until you see “Enroll result: enroll-completed”.</code></pre>
 <p>That’s it! Now you can unlock the laptop with your finger.</p>
 <p>The thing I couldn’t figure out how to do is to use the fingerprint as authentication for sudo.</p>
 
