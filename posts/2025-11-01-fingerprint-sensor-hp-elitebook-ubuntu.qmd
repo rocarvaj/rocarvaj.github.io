@@ -1,0 +1,20 @@
+---
+title: "Using fingerprint sensor on HP EliteBook with Ubuntu"
+date: 2025-11-01
+---
+
+For reasons I should not disclose, I couldn’t use the fingerprint sensor on a HP EliteBook laptop (HP EliteBook 840 G8) on Windows. This, together with my natural distaste for Windows, pushed me to install Ubuntu 25.10.
+
+If you go to Settings > Users, you can see the “Fingerprint Login” option which is disabled by default. If you try to enable it, there is a button with a plus sign that says “Scan new fingerprint”, but when you click on it, nothing happens.
+
+I braved (shout-out to <search.brave.com>) the problem and found out you should fire up the terminal and run fprintd-enroll. You’ll see the message:
+
+```
+Using device /net/reactivated/Fprint/Device/0
+Enrolling right-index-finger finger.
+Put your finger on the sensor and you should see the “Enroll result: enroll-stage-passed”. Keep on lifting and putting the finger on the sensor, until you see “Enroll result: enroll-completed”.
+```
+
+That’s it! Now you can unlock the laptop with your finger.
+
+The thing I couldn’t figure out how to do is to use the fingerprint as authentication for sudo.
