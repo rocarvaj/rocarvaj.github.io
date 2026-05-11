@@ -7,7 +7,7 @@ For reasons I should not disclose, I couldn’t use the fingerprint sensor on a 
 
 If you go to Settings > Users, you can see the “Fingerprint Login” option which is disabled by default. If you try to enable it, there is a button with a plus sign that says “Scan new fingerprint”, but when you click on it, nothing happens.
 
-I braved (shout-out to <search.brave.com>) the problem and found out you should fire up the terminal and run fprintd-enroll. You’ll see the message:
+I braved (shout-out to <https://search.brave.com>) the problem and found out you should fire up the terminal and run fprintd-enroll. You’ll see the message:
 
 ```
 Using device /net/reactivated/Fprint/Device/0
